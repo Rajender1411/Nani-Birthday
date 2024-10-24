@@ -6,31 +6,39 @@
     <title>Happy Birthday Bhavani (Nani)</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.20/dist/index.min.js"></script>
-    
 </head>
 <body>
     <div class="container">
+        <!-- Paragraph section -->
+        <div class="importance-text">
+            <p>Chitti kanna♥️, you are the light that brightens all our lives. 🌟</p>
+            <p>Your warmth, wisdom, and unconditional love make you truly irreplaceable. ❤️</p>
+            <p>Today, we celebrate not just your birthday, but the amazing person you are. 🎉</p>
+        </div>
+
+        <!-- Birthday wish -->
         <div class="birthday-wish" onclick="showerConfetti()">
             <h1>Happy Birthday Kannalu ♥️💕💫✨</h1>
         </div>
+
+        <!-- Scrollable cards section -->
         <div class="scrollable-cards">
             <!-- Card 1 -->
-            <div class="card">
+            <div class="card" onclick="enlargeCard(this)">
                 <img src="image1.jpg" alt="Bhavani" class="card-image">
                 <div class="card-content">
                     <h2>Wishing you joy and love on your special day! 🎉</h2>
                 </div>
             </div>
             <!-- Card 2 -->
-            <div class="card">
+            <div class="card" onclick="enlargeCard(this)">
                 <img src="image2.jpg" alt="Bhavani" class="card-image">
                 <div class="card-content">
                     <h2>May your day be filled with happiness and beautiful moments! 💕</h2>
                 </div>
             </div>
             <!-- Card 3 -->
-            <div class="card">
+            <div class="card" onclick="enlargeCard(this)">
                 <img src="image3.jpg" alt="Bhavani" class="card-image">
                 <div class="card-content">
                     <h2>You deserve all the love and cake in the world! 🍰💖</h2>
