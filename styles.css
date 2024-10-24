@@ -12,17 +12,36 @@ body, html {
     background: url('background.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Importance text section */
+.importance-text {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 30px;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.importance-text p {
+    margin: 10px 0;
+    line-height: 1.5;
 }
 
 /* Left side birthday wish */
 .birthday-wish {
-    padding-left: 50px;
+    padding-top: 20px;
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    z-index: 1;
 }
 
 .birthday-wish h1 {
@@ -35,7 +54,7 @@ body, html {
 .scrollable-cards {
     display: flex;
     gap: 40px;
-    padding-right: 50px;
+    padding: 20px 50px;
     overflow-x: scroll;
     width: 100%;
     white-space: nowrap;
@@ -43,8 +62,8 @@ body, html {
 
 .card {
     position: relative;
-    width: 350px;
-    height: 500px;
+    width: 300px;
+    height: 400px;
     border-radius: 20px;
     overflow: hidden;
     backdrop-filter: blur(10px);
@@ -55,8 +74,20 @@ body, html {
 }
 
 .card:hover {
-    transform: scale(1.15);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Enlarged card style */
+.card.enlarged {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    z-index: 999;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    height: 600px;
+    width: 450px;
+    overflow: hidden;
 }
 
 /* Glassmorphism effect on cards */
@@ -76,7 +107,8 @@ body, html {
     font-size: 1.2rem;
 }
 
-.card:hover .card-content {
+.card:hover .card-content,
+.card.enlarged .card-content {
     background: rgba(255, 255, 255, 0.4);
 }
 
@@ -124,5 +156,10 @@ body, html {
     .card {
         width: 250px;
         height: 350px;
+    }
+
+    .card.enlarged {
+        width: 350px;
+        height: 500px;
     }
 }
