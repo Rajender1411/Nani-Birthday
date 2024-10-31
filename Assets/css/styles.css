@@ -202,3 +202,36 @@ img {
     padding-inline: 2.5rem;
   }
   }
+/*background*/
+body {
+    background: linear-gradient(to bottom, #000428, #004e92); /* Dark blue gradient */
+    overflow: hidden;
+}
+
+@keyframes stars {
+    from {transform: translateY(0);}
+    to {transform: translateY(-100vh);}
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: url('path/to/stars.png') repeat;
+    animation: stars 30s linear infinite;
+    opacity: 0.8;
+}
+
+.colored-sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 87, 34, 0.2), transparent),
+                radial-gradient(circle at 20% 80%, rgba(255, 140, 0, 0.2), transparent),
+                radial-gradient(circle at 80% 20%, rgba(0, 191, 255, 0.2), transparent);
+    opacity: 0.6;
+                                }
